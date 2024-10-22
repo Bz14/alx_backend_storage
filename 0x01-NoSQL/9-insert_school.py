@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """ Insert a document in Python """
 
-def list_all(mongo_collection):
-    """ list all documents """
-    if not mongo_collection:
-        return []
-    return mongo_collection.find()
+
+def insert_school(mongo_collection, **kwargs):
+    """ Insert a document """
+    return mongo_collection.insert_one(kwargs).inserted_id
