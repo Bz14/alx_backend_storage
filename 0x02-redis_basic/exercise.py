@@ -7,6 +7,7 @@ import redis
 from typing import Union
 from typing import Callable
 
+
 def call_history(method: Callable) -> Callable:
     """Decorator to store history of inputs and outputs for a function"""
     @functools.wraps(method)
